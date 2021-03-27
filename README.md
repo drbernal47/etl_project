@@ -1,6 +1,6 @@
 # etl_project
 
-This project takes data from two csv files and extracts it, transforms it, and loads it into a sql database using an engine connection.
+This project takes data from two csv files and extracts it, transforms it, and loads it into a sql database using an engine connection. The project was completed by Humera Anjum, Jeannaej Yambing, and Daniel Bernal.
 
 ## How to access project files
 
