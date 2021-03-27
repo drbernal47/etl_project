@@ -11,6 +11,10 @@ This project takes data from two csv files and extracts it, transforms it, and l
 
 These csv files are from kaggle site (https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
 
+### Create your local pgAdmin configuration
+1. Create a new .py file
+1. Name it config.py
+1. Add in your pgAdmin local data - username, password, localhost_number, database_name
 
 ### Open the jupyter notebook (ETL_Project.ipynb)
 
@@ -21,32 +25,35 @@ We also used create_engine from sqlalchemy in order to connect to the sql databa
 We also stored all our information used to connect to the local database in a file called config.py so that we could avoid pushing our PgAdmin password to the repository.
 
 ### Run the Extract cells
-```
-## Store CSV paths
-## Read CSV
-## Store CSV Data onto a Data Frame 
-## Transform
-## Start with college type data
-## Drop unneccessary columns to only have the columns "School Name" and " School Type" save this as a new copy of the dataframe
-## Rename the columns to lower-case with no spaces for easier transition to SQL
-## Drop duplicate school_names
-## Set the the index as 'school_name'
-## Salary data
-## Drop unneccessary columns to only have the columns "School Name", "Region", "Starting Median salary", "Mid-Career Median Salary" save this as a new copy of the dataframe
-## Rename the columns to lower-case with no spaces for easier transition to SQL
-## Clean up the salary values types to remove "$" and "," and convert to float
-## Drop duplicate school_names
-## Set the the index as 'school_name'
-## Load - pgAdmin
-## Open a pgAdmin browser and create a new database
-## Create a table that correspondes to the college type data frame with the same column titles and types
-## Create another table that correspondes with the salaries data frame that has the same column titles and types
-## Run table creation code
-## Check that the tables are created by doing a Select * from ____ query
-## Back on the jupyter notebook
-## Create a new .py file
-## Name it config.py
-## Add in your pgAdmin - username, password, localhost_number, database_name
-## Add config.py to dependencies
-## Load - jupyter notebook
-## Create a connection the 
+
+1. Store CSVs paths
+1. Read CSVs
+1. Store CSV Data onto two Data Frames
+
+### Run the Transform cells
+1. Start with college type data
+1. Drop unneccessary columns to only have the columns "School Name" and " School Type" save this as a new copy of the dataframe
+1. Rename the columns to lower-case with no spaces for easier transition to SQL
+1. Drop duplicate school_names
+1. Set the the index as 'school_name'
+1. Salary data
+1. Drop unneccessary columns to only have the columns "School Name", "Region", "Starting Median salary", "Mid-Career Median Salary" save this as a new copy of the dataframe
+1. Rename the columns to lower-case with no spaces for easier transition to SQL
+1. Clean up the salary values types to remove "$" and "," and convert to float
+1. Drop duplicate school_names
+1 Set the the index as 'school_name'
+
+## Separately, open PgAdmin
+1. Open a pgAdmin browser and create a new database
+1. Open the schemas.sql file and run the code to create tables (college_type and salaries)
+1. Check that the tables are created by doing a Select * from ____ query
+
+## On Jupyter Notebook run Load cells
+1. Create a connection engine using the configuration variables
+1. Open the connection
+1. Check that the connection locates the tables in your sql database ('college_type' and 'salaries')
+1. Load the dataframes into the sql database using sqlalchemy
+
+## In PgAdmin run queries to test that data was successfully loaded
+1. You can run each table query separately
+1. You can then run a join query to ensure that the data is able to be merged
