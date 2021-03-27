@@ -4,15 +4,23 @@ This project takes data from two csv files and extracts it, transforms it, and l
 
 ## How to access project files
 
-## Download the files: 
+### Clone the Git hub repo
+### Use the csv files found in Resources: 
 ** Salaries-by-college-type.csv **
 ** Salaries-by-region.csv **
 
-## from kaggle site (https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
+These csv files are from kaggle site (https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
 
-## Create and clone a Git hub repo
-## Open a jupyter notebook
-## Extract
+
+### Open the jupyter notebook (ETL_Project.ipynb)
+
+### Run the dependencies
+
+We used pandas in order to store data from csv as dataframe.
+We also used create_engine from sqlalchemy in order to connect to the sql database and load the data.
+We also stored all our information used to connect to the local database in a file called config.py so that we could avoid pushing our PgAdmin password to the repository.
+
+### Extract
 ## Dependencies
 ```
 ## Store CSV paths
