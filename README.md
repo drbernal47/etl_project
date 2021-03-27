@@ -43,17 +43,17 @@ We also stored all our information used to connect to the local database in a fi
 1. Drop duplicate school_names
 1 Set the the index as 'school_name'
 
-## Separately, open PgAdmin
+### Separately, open PgAdmin
 1. Open a pgAdmin browser and create a new database
 1. Open the schemas.sql file and run the code to create tables (college_type and salaries)
 1. Check that the tables are created by doing a Select * from ____ query
 
-## On Jupyter Notebook run Load cells
+### On Jupyter Notebook run Load cells
 1. Create a connection engine using the configuration variables
 1. Open the connection
 1. Check that the connection locates the tables in your sql database ('college_type' and 'salaries')
 1. Load the dataframes into the sql database using sqlalchemy
 
-## In PgAdmin run queries to test that data was successfully loaded
+### In PgAdmin run queries to test that data was successfully loaded
 1. You can run each table query separately
 1. You can then run a join query to ensure that the data is able to be merged
