@@ -6,8 +6,8 @@ This project takes data from two csv files and extracts it, transforms it, and l
 
 ### Clone the Git hub repo
 ### Use the csv files found in Resources: 
-** Salaries-by-college-type.csv **
-** Salaries-by-region.csv **
+* Salaries-by-college-type.csv
+* Salaries-by-region.csv
 
 These csv files are from kaggle site (https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
 
@@ -20,8 +20,7 @@ We used pandas in order to store data from csv as dataframe.
 We also used create_engine from sqlalchemy in order to connect to the sql database and load the data.
 We also stored all our information used to connect to the local database in a file called config.py so that we could avoid pushing our PgAdmin password to the repository.
 
-### Extract
-## Dependencies
+### Run the Extract cells
 ```
 ## Store CSV paths
 ## Read CSV
